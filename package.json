@@ -1,0 +1,56 @@
+{
+  "name": "react-tictactoe",
+  "version": "3.13.0",
+  "description": "React Hooks: Tic Tac Toe",
+  "author": "August “Kai” Kaiser <awkaiser@users.noreply.github.com>",
+  "repository": "awkaiser/react-tictactoe",
+  "homepage": "https://awkaiser.github.io/react-tictactoe/",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "tic tac toe",
+    "react",
+    "minimax"
+  ],
+  "engines": {
+    "node": ">=14.15.0",
+    "npm": ">=6.14.8"
+  },
+  "dependencies": {
+    "@angular/localize": "^11.2.13",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.3"
+  },
+  "devDependencies": {
+    "browserslist-config-google": "^3.0.1",
+    "gh-pages": "^3.1.0",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    "extends browserslist-config-google"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write"
+    ]
+  }
+}
